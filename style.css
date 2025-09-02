@@ -93,3 +93,39 @@ body{
 /* accessibility helper */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+
+  /* Styling for the tools list */
+  .tools-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    margin: 15px 0;
+  }
+
+  .tools-list li {
+    position: relative;
+    padding-left: 25px; /* space for custom bullet */
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Custom bullet design */
+  .tools-list li::before {
+    content: "✔"; /* You can use ●, ➤, or any symbol */
+    position: absolute;
+    left: 0;
+    color: #2a9d8f; /* greenish */
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
+  .site-nav a {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+}
